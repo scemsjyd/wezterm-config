@@ -12,7 +12,25 @@ elseif platform.is_win or platform.is_linux then
 	mod.SUPER_REV = "ALT|CTRL"
 end
 
-local keys = {} -- 未配置
+local keys = {
+	{
+		key = "r",
+		mods = "SUPER|SHIFT",
+		action = act.PromptInputLine({
+			description = "输入新的 Tab 名称（留空以恢复默认名称）",
+			action = wezterm.action_callback(function(window, _, line)
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
+	},
+	{
+		key = "t",
+		mods = "SUPER|SHIFT",
+		action = act.ShowTabNavigator,
+	},
+}
 
 return {
 	disable_default_key_bindings = false,

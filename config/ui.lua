@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local c_init = require("colors.init")
-local colors = c_init["flexoki"]
+local colors = c_init["custom"]
 local fonts = { "FiraCode Nerd Font", "Fira Code", "Source Code Pro" }
 
 return {
@@ -12,11 +12,11 @@ return {
 	webgpu_power_preference = "HighPerformance",
 	webgpu_preferred_adapter = wezterm.gui.enumerate_gpus()[1],
 	colors = colors, -- 主题配色
-	hide_tab_bar_if_only_one_tab = false,
+	hide_tab_bar_if_only_one_tab = true,
 	-- scrollbar
 	enable_scroll_bar = false, -- 是否显示滚动条
 	-- tab bar
-	enable_tab_bar = false, -- 是否显示标签
+	enable_tab_bar = true, -- 是否显示标签
 	use_fancy_tab_bar = true,
 	tab_max_width = 25,
 	show_tab_index_in_tab_bar = false, -- 是否显示tab标签数
@@ -26,7 +26,7 @@ return {
 			source = { Color = colors.background },
 			height = "100%",
 			width = "100%",
-			opacity = 0.99, -- 背景透明度
+			opacity = 1, -- 背景透明度
 		},
 	},
 	-- window

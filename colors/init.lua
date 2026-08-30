@@ -1,5 +1,5 @@
 return {
 	["flexoki"] = require("colors.flexoki"),
-	["custom"] = require("colors.custom")
+	["iterm2"] = require("colors.iterm2")
 }
 

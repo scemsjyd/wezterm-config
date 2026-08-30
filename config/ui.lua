@@ -1,14 +1,14 @@
 local wezterm = require("wezterm")
 local c_init = require("colors.init")
-local colors = c_init["custom"]
-local fonts = { "FiraCode Nerd Font", "Fira Code", "Source Code Pro" }
+local colors = c_init["iterm2"]
+local fonts = { "FiraCode Nerd Font", "Fira Code", "Source Code Pro", "Monaco" }
 
 return {
 	animation_fps = 60,
 	max_fps = 120,
 	front_end = "WebGpu",
-	font = wezterm.font(fonts[2], { weight = "Thin", italic = false }), -- 字体
-	font_size = 13,
+	font = wezterm.font(fonts[4], { weight = "Regular", italic = false }), -- 字体
+	font_size = 12,
 	webgpu_power_preference = "HighPerformance",
 	webgpu_preferred_adapter = wezterm.gui.enumerate_gpus()[1],
 	colors = colors, -- 主题配色
@@ -44,6 +44,6 @@ return {
 		saturation = 0.9,
 		brightness = 0.65,
 	},
-	window_decorations = "NONE",
+	window_decorations = "RESIZE",
 	default_cursor_style = "BlinkingBar", -- 改变光标形状
 }

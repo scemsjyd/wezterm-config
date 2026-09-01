@@ -6,6 +6,12 @@ return {
     cursor_fg = "#101421",
     selection_bg = "#00c8ff",
     selection_fg = "#FFFFFF",
+    tab_bar = {
+        active_tab = {
+            bg_color = "#00C200",
+            fg_color = "#000000",
+        },
+    },
     ansi = {
         "#000000",
         "#C91B00",

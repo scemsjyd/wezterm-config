@@ -15,7 +15,7 @@ end
 local keys = {
 	{
 		key = "r",
-		mods = "SUPER|SHIFT",
+		mods = "LEADER",
 		action = act.PromptInputLine({
 			description = "输入新的 Tab 名称（留空以恢复默认名称）",
 			action = wezterm.action_callback(function(window, _, line)
@@ -27,13 +27,13 @@ local keys = {
 	},
 	{
 		key = "t",
-		mods = "SUPER|SHIFT",
+		mods = "LEADER",
 		action = act.ShowTabNavigator,
 	},
 }
 
 return {
 	disable_default_key_bindings = false,
-	leader = { key = "Space", mods = mod.SUPER_REV },
+	leader = { key = "b", mods = mod.SUPER },
 	keys = keys,
 }

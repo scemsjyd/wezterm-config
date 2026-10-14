@@ -1,14 +1,14 @@
 local wezterm = require("wezterm")
 local c_init = require("colors.init")
 local colors = c_init["iterm2"]
-local fonts = { "FiraCode Nerd Font", "Fira Code", "Source Code Pro", "Monaco" }
+local fonts = { "Fira Code", "Source Code Pro", "Monaco", "JetBrains Mono", "Menlo"}
 
 return {
 	animation_fps = 60,
 	max_fps = 120,
 	front_end = "WebGpu",
-	font = wezterm.font(fonts[4], { weight = "Regular", italic = false }), -- 字体
-	font_size = 12,
+	font = wezterm.font(fonts[3], { weight = "Regular", italic = false }), -- 字体
+	font_size = 13,
 	webgpu_power_preference = "HighPerformance",
 	webgpu_preferred_adapter = wezterm.gui.enumerate_gpus()[1],
 	colors = colors, -- 主题配色
